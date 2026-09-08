@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap version 5.3.8  CSS link-->
+    
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,37 +12,31 @@
       crossorigin="anonymous"
     />
 
-    <!-- Google fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dawning+of+a+New+Day&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Momo+Signature&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Stack+Sans+Notch:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.om" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dawning+of+a+New+Day&family=DynaPuff:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Momo+Signature&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Stack+Sans+Notch:wght@200..700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CSS style sheet link -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Guess the Number Game</title>
 </head>
 <body>
 
-   <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 fs-6">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 fs-6">
       <div class="container-fluid justify-content-center">
         <a
           class="navbar-brand"
           href="index.html"
-          aria-label="clicking on title and monkeys lead to homepage"
+          aria-label="Clicking on title returns to homepage"
         >
           <img
             src="assets/images/gameicon.jpg"
-            alt="memory monkey cartoon"
+            alt="Game Icon"
             width="30"
             height="24"
             class="d-inline-block align-text-top img-fluid"
@@ -49,7 +44,7 @@
           Guess the Number Game
           <img
             src="assets/images/gameicon.jpg"
-            alt="memory monkey cartoon"
+            alt="Game Icon"
             width="30"
             height="24"
             class="d-inline-block align-text-top img-fluid"
@@ -69,62 +64,60 @@
         <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
           <ul class="navbar-nav text-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
                 href="game-page.html"
-                aria-label="play now button goes to the game page"
-                >Play Now</a
-              >
+                aria-label="Play Now button goes to the game page"
+              >Play Now</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <h1>Guess The Number Game</h1>
+    <!-- Main Content Container -->
+    <main class="container text-center my-4">
+      <h1 class="mb-4">Guess The Number Game</h1>
 
-    <div class="guess-container">
+      <div class="game-container max-width-sm mx-auto">
+        <form id="guessForm">
+          <div class="mb-3">
+            <label for="userGuess" class="form-label visually-hidden">Enter your guess</label>
+            <input 
+              type="number" 
+              class="form-control text-center mx-auto" 
+              style="max-width: 250px;" 
+              id="userGuess" 
+              placeholder="Enter your guess" 
+              required
+            >
+          </div>
+          <button type="submit" id="submitGuess" class="btn btn-primary">Submit Guess</button>
+        </form>
+      </div>
 
-    </div>
+      <!-- Feedback Area for JavaScript Output -->
+      <div id="gameFeedback" class="mt-4 fs-5" aria-live="polite"></div>
+    </main>
 
-    <div class="game-container">
-
-    </div>
-
-    <form>
-      <input type="number" id="userGuess" placeholder="Enter your guess">
-      <br>
-      <br>
-      <button type="submit" id="submitGuess">Submit Guess</button>
-    </form>
-<div>
-    
-</div>
-
-
-
-
-
-
-<!-- Bootstrap version 5.3.8 JavaScript link -->
+    <!-- Bootstrap JS Bundle -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
 
-    <!-- Fontawesome JS kit -->
+    <!-- FontAwesome JS Kit -->
     <script
       src="https://kit.fontawesome.com/8da35863e9.js"
       crossorigin="anonymous"
     ></script>
-    <!-- JavaScipt Coding for the Memory Monkey Game -->
-    <script src="assets/js/myscript.js"></script>
+
+    <!-- Custom JavaScript Logic (Matches the filename in assets/js/) -->
+    <script src="assets/js/scipt.js"></script>
     
 </body>
 </html>
